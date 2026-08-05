@@ -82,3 +82,25 @@ network and will control routing between security zones.
 Inter-zone communication will be denied or permitted according
 to explicit firewall policy rather than allowing unrestricted
 communication between all systems.
+
+## VMware Workstation Implementation
+
+The logical security zones are implemented using custom VMware
+Workstation virtual networks.
+
+| Security Zone | VMware Network | Network Type | Subnet |
+|---|---|---|---|
+| User | VMnet2 | Host-only | 10.10.10.0/24 |
+| Server | VMnet3 | Host-only | 10.10.20.0/24 |
+| Security | VMnet4 | Host-only | 10.10.30.0/24 |
+| Attack | VMnet5 | Host-only | 10.10.40.0/24 |
+| pfSense WAN | VMnet8 | NAT | VMware-assigned subnet |
+
+VMware DHCP is disabled on the four internal VMnets. pfSense
+will provide routing and, where appropriate, DHCP and DNS-related
+network services.
+
+The VMware host virtual adapter is disabled on the internal
+VMnets to reduce unintended direct paths between the Windows host
+and lab systems. Administrative access will be designed explicitly
+rather than assumed.
