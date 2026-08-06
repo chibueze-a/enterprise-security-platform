@@ -3,6 +3,13 @@ Infrastructure
 
 - [x] Install VMware
 - [x] Configure pfSense
+- [x] pfSense booted successfully
+- [x] WAN received DHCP address
+- [x] LAN configured
+- [x] Server network configured
+- [x] Security network configured
+- [x] Attack network configured
+- [x] Internet connectivity verified
 - [ ] Windows Server
 - [ ] Ubuntu Server
 
