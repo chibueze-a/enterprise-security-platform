@@ -1,8 +1,8 @@
 ## Phase 1
 Infrastructure
 
-- [ ] Install VirtualBox
-- [ ] Configure pfSense
+- [x] Install VMware
+- [x] Configure pfSense
 - [ ] Windows Server
 - [ ] Ubuntu Server
 
