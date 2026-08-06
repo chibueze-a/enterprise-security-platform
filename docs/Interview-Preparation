@@ -1,6 +1,4 @@
 
 1. How did you verify that your firewall was functioning?
-- I didn't assume the problem was the firewall. I first verified that the WAN interface had received a DHCP address from VMware's NAT network. 
-  Then I tested connectivity by pinging 1.1.1.1, which confirmed routing and NAT were working. Because IP connectivity succeeded while hostname 
-  resolution failed, I concluded the issue was related to DNS rather than firewall configuration. That allowed me to isolate the problem instead 
-  of making unnecessary changes.
+
+- I didn't assume the problem was the firewall. I first verified that the WAN interface had received a DHCP address from VMware's NAT network. Then I tested connectivity by pinging 1.1.1.1, which confirmed routing and NAT were working. Because IP connectivity succeeded while hostname resolution failed, I concluded the issue was related to DNS rather than firewall configuration. That allowed me to isolate the problem instead of making unnecessary changes.
