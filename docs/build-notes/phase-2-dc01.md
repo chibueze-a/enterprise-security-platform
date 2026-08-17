@@ -37,14 +37,18 @@ Roles to Install:
 
 Validation Checklist
 
-- [ ] Windows Server installed
-- [ ] Server renamed to DC01
-- [ ] Static IP configured
-- [ ] Internet connectivity verified
-- [ ] AD DS installed
-- [ ] DNS installed
-- [ ] Forest created
-- [ ] Domain created
+[x] Windows Server 2025 installed
+[x] VMware Tools installed
+[x] Hostname DC01
+[x] Static IP 10.10.20.10/24
+[x] Gateway 10.10.20.1
+[x] pfSense SERVER policy configured
+[x] Gateway connectivity
+[x] Internet IP connectivity
+[x] Pre-AD recovery snapshot
+[ ] DNS Server
+[ ] AD DS
+[ ] corp.apextrading.com forest
 
 ### SERVER Gateway Connectivity
 
