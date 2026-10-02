@@ -124,17 +124,24 @@ Created during Domain Controller promotion
 
 ### Validation
 
-- [ ] AD DS role installed
-- [ ] DNS Server role installed
-- [ ] DC01 promoted successfully
-- [ ] corp.apextrading.com created
-- [ ] Domain Administrator login successful
-- [ ] Forward lookup zone exists
-- [ ] _msdcs zone exists
-- [ ] DC01 DNS record resolves
-- [ ] LDAP SRV records resolve
-- [ ] Kerberos SRV records resolve
-- [ ] SYSVOL share exists
-- [ ] NETLOGON share exists
-- [ ] dcdiag completed
-- [ ] External DNS resolution tested
+-  AD DS role installed
+-  DNS Server role installed
+-  DC01 promoted successfully
+-  corp.apextrading.com created
+-  Domain Administrator login successful
+-  Forward lookup zone exists
+-  _msdcs zone exists
+-  DC01 DNS record resolves
+-  LDAP SRV records resolve
+-  Kerberos SRV records resolve
+-  SYSVOL share exists
+-  NETLOGON share exists
+-  dcdiag completed
+-  External DNS resolution tested
+
+Why we took these steps
+Installing AD DS and promoting a server are separate operations because installing the role merely provides the software; promotion gives the server responsibility for a particular directory domain.
+We installed DNS alongside AD because Active Directory relies heavily on DNS for service discovery. Clients don't need hard-coded knowledge of which machine is a Domain Controller—they can discover services through DNS records.
+We validated LDAP and Kerberos SRV records because merely seeing "DNS Server running" doesn't prove that Active Directory service discovery is functioning.
+We also kept DC01 pointed at its AD DNS infrastructure rather than switching it to a public DNS resolver. Later, external queries can be forwarded appropriately while internal AD queries remain authoritative.
+And we ran dcdiag because good infrastructure engineering means validating the service, not merely trusting that an installation wizard reached 100%.
