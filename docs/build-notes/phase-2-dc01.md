@@ -86,3 +86,55 @@ while pfSense's firewall policy controlled the IPv4 traffic.
 
 Troubleshooting was performed progressively rather than disabling
 security controls or making unrelated configuration changes.
+
+
+## Active Directory Deployment
+
+### Forest
+
+corp.apextrading.com
+
+### Forest Root Domain
+
+corp.apextrading.com
+
+### Domain Controller
+
+DC01
+
+### Domain Controller Roles
+
+- Active Directory Domain Services
+- DNS Server
+- Global Catalog
+
+### Directory Services
+
+LDAP:
+Enabled through AD DS
+
+Kerberos:
+Domain authentication protocol
+
+DNS:
+AD-integrated DNS
+
+SYSVOL:
+Created during Domain Controller promotion
+
+### Validation
+
+- [ ] AD DS role installed
+- [ ] DNS Server role installed
+- [ ] DC01 promoted successfully
+- [ ] corp.apextrading.com created
+- [ ] Domain Administrator login successful
+- [ ] Forward lookup zone exists
+- [ ] _msdcs zone exists
+- [ ] DC01 DNS record resolves
+- [ ] LDAP SRV records resolve
+- [ ] Kerberos SRV records resolve
+- [ ] SYSVOL share exists
+- [ ] NETLOGON share exists
+- [ ] dcdiag completed
+- [ ] External DNS resolution tested
